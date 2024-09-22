@@ -7,9 +7,10 @@ export default function Board() {
 
   function handleClick(i) {
     if (square[i] || calculateWinner(square)) {
-      //if anything in the square
+      //if sauare is not null or have a winner
       return;
     }
+    //next player setup
     const nextSquare = square.slice();
     if (xIsNext) {
       nextSquare[i] = "X";
@@ -48,6 +49,7 @@ export default function Board() {
     </>
   );
 }
+//calculate a winner
 function calculateWinner(square) {
   const lines = [
     [0, 1, 2],
