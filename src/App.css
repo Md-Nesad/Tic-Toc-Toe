@@ -4,23 +4,24 @@
 
 body {
   font-family: sans-serif;
-  margin: 20px;
+  /* margin: 20px; */
   padding: 0;
 }
 
 .square {
-  background: #fff;
+  background: rgb(84, 24, 34);
+  color: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 44px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 70px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 90px;
 }
 
 .board-row:after {

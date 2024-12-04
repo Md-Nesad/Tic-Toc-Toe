@@ -22,29 +22,39 @@ export default function Board() {
   }
   // declaring winner
   const winner = calculateWinner(square);
+
   let status;
   if (winner) {
-    status = "We got the Winner: " + winner;
+    status = "We got the Winner : ";
   } else {
-    status = "Next player is: " + (xIsNext ? "X" : "O");
+    status = "Next player is : " + (xIsNext ? "X" : "O");
   }
   return (
     <>
-      <div className="status">{status}</div> <br />
-      <div className="board-row">
-        <Square value={square[0]} onSquareClick={() => handleClick(0)} />
-        <Square value={square[1]} onSquareClick={() => handleClick(1)} />
-        <Square value={square[2]} onSquareClick={() => handleClick(2)} />
-      </div>
-      <div className="board-row">
-        <Square value={square[3]} onSquareClick={() => handleClick(3)} />
-        <Square value={square[4]} onSquareClick={() => handleClick(4)} />
-        <Square value={square[5]} onSquareClick={() => handleClick(5)} />
-      </div>
-      <div className="board-row">
-        <Square value={square[6]} onSquareClick={() => handleClick(6)} />
-        <Square value={square[7]} onSquareClick={() => handleClick(7)} />
-        <Square value={square[8]} onSquareClick={() => handleClick(8)} />
+      <h1 className="text-center text-white font-serif w-fit mx-auto my-10 py-3 px-5 rounded">
+        Let's play a game..
+      </h1>
+      <div className=" bg-pink-800 text-white px-4 py-3 rounded font-bold font-serif tracking-wider w-72 mx-auto">
+        {status}
+        <span className="text-2xl align-middle pl-3">{winner}</span>
+      </div>{" "}
+      <br />
+      <div className="flex justify-center items-center">
+        <div className="board-row">
+          <Square value={square[0]} onSquareClick={() => handleClick(0)} />
+          <Square value={square[1]} onSquareClick={() => handleClick(1)} />
+          <Square value={square[2]} onSquareClick={() => handleClick(2)} />
+        </div>
+        <div className="board-row">
+          <Square value={square[3]} onSquareClick={() => handleClick(3)} />
+          <Square value={square[4]} onSquareClick={() => handleClick(4)} />
+          <Square value={square[5]} onSquareClick={() => handleClick(5)} />
+        </div>
+        <div className="board-row">
+          <Square value={square[6]} onSquareClick={() => handleClick(6)} />
+          <Square value={square[7]} onSquareClick={() => handleClick(7)} />
+          <Square value={square[8]} onSquareClick={() => handleClick(8)} />
+        </div>
       </div>
     </>
   );

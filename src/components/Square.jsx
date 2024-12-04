@@ -1,9 +1,14 @@
 export default function Square({ value, onSquareClick }) {
   return (
-    <>
-      <button className="square" onClick={onSquareClick}>
-        {value}
+    <div>
+      <button
+        onClick={onSquareClick}
+        className={
+          value === "X" ? "text-white square" : "text-green-400 square"
+        }
+      >
+        <h1>{value}</h1>
       </button>
-    </>
+    </div>
   );
 }
